@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <!-- Tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        background: {
+                            backBody: `linear-gradient(
+                                169.15deg,
+                                #0a1830 - 6.04 %,
+                                #0d244c 26%,
+                                #16356e 56.98%,
+                                #2e57a4 83.53%,
+                                #7096db 114.51%
+                            )`,
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <!-- Additional CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/app.css') }}">
+
+        <title>PHANTOM</title>
+    </head>
+
+    <body class="bg-back text-white">
+        <nav class="bg-transparent px-10 gap-x-14 flex items-center py-4">
+            <div class="left">
+                <a class="text-2xl font-semibold" href="/">PHANTOM</a>
+            </div>
+            <ul class="list-none flex items-center gap-x-5">
+                <li class="text-lg">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="text-lg">
+                    <a class="text-gray-400" href="#">Face App</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- HERO -->
+        <div class="HeroBg flex flex-col justify-center px-14">
+            <h1 class="text-7xl font-bold">FACE RECOGNITION</h1>
+            <p class="text-[#A5B7D6] font-semibold w-[700px] text-lg">A facial recognition system uses biometrics to map
+                facial features from a
+                photograph or video</p>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="px-[100px] my-[100px]">
+            <span class="text-[#A5B7D6] font-semibold text-lg">Who we are?</span>
+            <h2 class="font-semibold text-4xl mt-1">ABOUT PHANTOM</h2>
+            <p class="text-lg leading-7 mt-3">This is a face detection software that provides fast and accurate
+                features of
+                facial
+                features detection.
+                This will scan all the faces from the image and It will tell you about emotions, gender, race of the
+                person and whether
+                the person is wearing mask or not.This can recognize seven emotions and those are angry, disgusted,
+                fearful, sad, happy,
+                neutral and surprise.
+            </p>
+        </div>
+
+        <!-- HOW IT WORKS! -->
+        <div class="px-[100px] my-[100px]">
+            <p class="text-[#A5B7D6] font-semibold text-lg text-center">HOW IT WORKS!!</p>
+            <h2 class="font-semibold text-4xl mt-1 text-center">How Phantom Works</h2>
+            <div class="flex flex-col items-center pt-[30px]">
+                <div class="flex items-center">
+                    <div class='flex w-[310px] items-center flex-col'>
+                        <div
+                            class='bg-[#2D61DB] border-[#7d93ca] border-[2px] rounded-full h-[80px] w-[80px] ml-[20px] mr-[20px] items-center flex-col flex p-[20px]'>
+                            <img src='../static/wallet.svg' alt='' />
+                        </div>
+                        <span class='w-[180px] mt-[10px] text-center'>Choose your Choice</span>
+                    </div>
+                    <img src='../static/line1.svg' alt='' />
+                    <div class='flex w-[310px] items-center flex-col'>
+                        <div
+                            class='bg-[#2D61DB] border-[#7d93ca] border-[2px] rounded-full h-[80px] w-[80px] ml-[20px] mr-[20px] items-center flex-col flex p-[20px]'>
+                            <img src='../static/add.svg' alt='' />
+                        </div>
+                        <span class='w-[180px] mt-[10px] text-center'>Live Video</span>
+                    </div>
+                    <img src='../static/line1.svg' alt='' />
+                    <div class='flex w-[310px] items-center flex-col'>
+                        <div
+                            class='bg-[#2D61DB] border-[#7d93ca] border-[2px] rounded-full h-[80px] w-[80px] ml-[20px] mr-[20px] items-center flex-col flex p-[20px]'>
+                            <img src='../static/collection.svg' alt='' />
+                        </div>
+                        <span class='w-[180px] mt-[10px] text-center'>
+                            Detection and Identification
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="px-[100px] my-[100px]">
+            <p class="text-[#A5B7D6] font-semibold text-lg text-center">WE PROVIDE!!</p>
+            <h2 class="font-semibold text-4xl mt-1 text-center">SERVICES</h2>
+            <div class="flex justify-center flex-wrap gap-x-20 gap-y-24  pt-[30px]">
+                <a href="./emotion"
+                    class="flex flex-col rounded-xl cursor-pointer p-4 bg-[rgba(27,44,71,0.7)] w-[20vw] border-2 border-[#596985] p-3">
+                    <img src='../static/dummy1.svg' alt='' class="rounded-t-xl h-[300px] w-full object-cover" />
+                    <h2 class="font-[600] text-xl my-4">Emotion Detector</h2>
+                </a>
+                <a href="./emotion"
+                    class="flex flex-col rounded-xl cursor-pointer p-4 bg-[rgba(27,44,71,0.7)] w-[20vw] border-2 border-[#596985] p-3">
+                    <img src='../static/dummy2.svg' alt='' class="rounded-t-xl h-[300px] w-full object-cover" />
+                    <h2 class="font-[600] text-xl my-4">Mask Detector</h2>
+                </a>
+                <a href="./emotion"
+                    class="flex flex-col rounded-xl cursor-pointer p-4 bg-[rgba(27,44,71,0.7)] w-[20vw] border-2 border-[#596985] p-3">
+                    <img src='../static/dummy3.svg' alt='' class="rounded-t-xl h-[300px] w-full object-cover" />
+                    <h2 class="font-[600] text-xl my-4">Gender Detector</h2>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="flex items-center justify-between px-20 bg-[#0A1830] py-4 font-semibold text-lg">
+            <div>&copy; 2022 Phantom, All rights reserved</div>
+            <div>Terms and Conditions | Community Guidlines | Privacy Policy</div>
+        </footer>
+
+        <!-- {% block content %}
+        {% endblock %} -->
+
+        <footer class="bg-[#0A1830] px-5"></footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(
+        169.15deg,
+        #0a1830 -6.04%,
+        #0d244c 26%,
+        #16356e 56.98%,
+        #2e57a4 83.53%,
+        #7096db 114.51%
+    ) !important;
+
+    color: white;
+    min-height: 100vh;
+}
+
+.HeroBg {
+    background: url('../banner.svg');
+    height: 92vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
