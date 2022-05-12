@@ -1,6 +1,7 @@
 from flask import Flask, render_template, Response
 from camera import Video
 from mask import MaskVideo
+from gender import Gender
 
 app = Flask(__name__)
 
@@ -40,6 +41,12 @@ def video():
 @app.route('/maskVideo')
 def maskVideo():
     return Response(gen(MaskVideo()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+@app.route('/genderVideo')
+def genderVideo():
+    return Response(gen(Gender()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
