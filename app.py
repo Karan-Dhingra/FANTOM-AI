@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response
 from camera import Video
+from mask import MaskVideo
 
 app = Flask(__name__)
 
@@ -14,6 +15,16 @@ def emotion():
     return render_template('index.html')
 
 
+@app.route('/mask/')
+def mask():
+    return render_template('mask.html')
+
+
+@app.route('/gender/')
+def gender():
+    return render_template('gender.html')
+
+
 def gen(camera):
     while True:
         frame = camera.get_frame()
@@ -23,6 +34,12 @@ def gen(camera):
 @app.route('/video')
 def video():
     return Response(gen(Video()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+@app.route('/maskVideo')
+def maskVideo():
+    return Response(gen(MaskVideo()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
